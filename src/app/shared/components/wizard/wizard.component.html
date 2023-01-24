@@ -1,0 +1,68 @@
+<div class="bs-stepper">
+    <div class="bs-stepper-header row" role="tablist">
+
+      <div class="step" >
+        <button style="width: 180px;" type="button" class="step-trigger" role="tab"
+          aria-controls="logins-part" id="datos-eleccion">
+           <span  class="bs-stepper-circle">1</span>
+          <span  class="bs-stepper-circle invalido-circle">!</span>
+          <span  class="bs-stepper-circle valido-circle">
+            <i class="ni ni-check-bold"></i>
+          </span>
+          <span class="bs-stepper-label">Datos de la elección</span> 
+   
+        </button>
+      </div>
+     
+
+      <!-- <div class="line"></div>
+      <div class="step" data-target="#datos-generales">
+        <button style="width: 180px;" type="button" class="step-trigger" role="tab"
+          aria-controls="information-part" id="datos-generales">
+          <span *ngIf="!datosGeneralesFormTouched()" class="bs-stepper-circle">2</span>
+          <span *ngIf="datosGeneralesFormNoValido()" class="bs-stepper-circle invalido-circle">!</span>
+          <span *ngIf="datosGeneralesFormValido()" class="bs-stepper-circle valido-circle">
+            <i class="ni ni-check-bold"></i>
+          </span>
+          <span class="bs-stepper-label">Datos generales</span>
+        </button>
+      </div>
+
+      <div class="line"></div>
+      <div class="step" data-target="#datos-personales">
+        <button style="width: 180px;" type="button" class="step-trigger" role="tab"
+          aria-controls="information-part" id="datos-personales">
+          <span *ngIf="!datosPersonalesFormTouched()" class="bs-stepper-circle">3</span>
+          <span *ngIf="datosPersonalesFormNoValido()" class="bs-stepper-circle invalido-circle">!</span>
+          <span *ngIf="datosPersonalesFormValido()" class="bs-stepper-circle valido-circle">
+            <i class="ni ni-check-bold"></i>
+          </span>
+          <span class="bs-stepper-label">Datos personales</span>
+        </button>
+      </div>
+      
+      <div class="line"></div>
+      <div class="step" data-target="#recepcion-documentos">
+        <button style="width: 200px;" type="button" class="step-trigger" role="tab"
+          aria-controls="information-part" id="recepcion-documentos">
+          <span *ngIf="!recepcionDocumentosFormValido()" class="bs-stepper-circle">4</span>
+          <span *ngIf="recepcionDocumentosFormValido()" class="bs-stepper-circle valido-circle">
+            <i class="ni ni-check-bold"></i>
+          </span>
+          <span class="bs-stepper-label">Recepción de documentos</span>
+        </button>
+      </div> -->
+
+      <div class="bs-stepper-content">
+        <div id="datos-eleccion" class="content" role="tabpanel" aria-labelledby="logins-part-trigger"></div>
+        <div id="datos-generales" class="content" role="tabpanel" aria-labelledby="logins-part-trigger"></div>
+        <div id="datos-personales" class="content" role="tabpanel" aria-labelledby="logins-part-trigger"></div>
+        <div id="recepcion-documentos" class="content" role="tabpanel" aria-labelledby="logins-part-trigger"></div>
+      </div>
+    </div>
+
+    <ng-container *ngIf="formStep == 1">
+        Contenido
+    </ng-container>
+    
+  </div>

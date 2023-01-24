@@ -1,0 +1,54 @@
+<nav class="navbar navbar-top navbar-expand navbar-dark bg-danger border-bottom" id="navbar-main">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar links -->
+      <ul class="navbar-nav align-items-center ml-md-auto">
+        <li class="nav-item d-xl-none">
+          <!-- Sidenav toggler -->
+          <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main"
+            (click)="openSidebar()">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <!-- User -->
+      <ul class="navbar-nav align-items-center ml-auto ml-md-0">
+        <li class="nav-item dropdown" dropdown placement="bottom-right">
+          <a class="nav-link pr-0 dropdown-toggle" role="button" dropdownToggle>
+            <div class="media align-items-center">
+              <span class="avatar avatar-sm rounded-circle">
+                <img [src]="photoProfile | imagenProfile" alt="User image">
+              </span>
+              <div class="media-body ml-2 d-none d-lg-block">
+                <span class="mb-0 text-sm  font-weight-bold">{{name}}</span>
+              </div>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" *dropdownMenu>
+            <div class=" dropdown-header noti-title">
+              <h6 class="text-overflow m-0">¡Bienvenido!</h6>
+            </div>
+
+            <a class="dropdown-item" *ngIf="employeeId">
+              <i class="fas fa-id-card"></i> <span>N° Empleado: {{employeeId}}</span>
+            </a>
+            <a class="dropdown-item" *ngIf="department">
+              <i class="fas fa-building"></i> <span>Área: {{department}}</span>
+            </a>
+
+            <div class="dropdown-divider"></div>
+
+            <a href="javascript:void()" (click)="logout()" class="dropdown-item">
+              <i class="fas fa-sign-out-alt"></i> <span>Cerrar sesión</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div *ngIf="sidenavOpen === true" class="backdrop d-xl-none" (click)="toggleSidenav()"></div>
